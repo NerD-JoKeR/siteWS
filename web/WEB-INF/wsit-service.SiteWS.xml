@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="SiteWSService" targetNamespace="http://service/" xmlns:tns="http://service/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" 
+ >
+    <message name="osrns"/>
+    <message name="osrnsResponse"/>
+    <message name="mst"/>
+    <message name="mstResponse"/>
+    <message name="authorization"/>
+    <message name="authorizationResponseAut"/>
+    <message name="changePass"/>
+    <message name="changePassResponsePass"/>
+    <message name="asiaKazyna"/>
+    <message name="asiaKazynaResponse"/>
+    <message name="asiaBolashak"/>
+    <message name="asiaBolashakResponse"/>
+    <portType name="SiteWS">
+        <operation name="osrns">
+            <input message="tns:osrns"/>
+            <output message="tns:osrnsResponse"/>
+        </operation>
+        <operation name="mst">
+            <input message="tns:mst"/>
+            <output message="tns:mstResponse"/>
+        </operation>
+        <operation name="authorization">
+            <input message="tns:authorization"/>
+            <output message="tns:authorizationResponseAut"/>
+        </operation>
+        <operation name="changePass">
+            <input message="tns:changePass"/>
+            <output message="tns:changePassResponsePass"/>
+        </operation>
+        <operation name="asiaKazyna">
+            <input message="tns:asiaKazyna"/>
+            <output message="tns:asiaKazynaResponse"/>
+        </operation>
+        <operation name="asiaBolashak">
+            <input message="tns:asiaBolashak"/>
+            <output message="tns:asiaBolashakResponse"/>
+        </operation>
+    </portType>
+    <binding name="SiteWSPortBinding" type="tns:SiteWS">
+        <operation name="osrns">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="mst">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="authorization">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="changePass">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="asiaKazyna">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="asiaBolashak">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="SiteWSService">
+        <port name="SiteWSPort" binding="tns:SiteWSPortBinding"/>
+    </service>
+</definitions>
